@@ -15,9 +15,9 @@ public class Player_Item_Drop : MonoBehaviour
     public GameObject soulEssenceUIText;
     void Awake()
     {
-        soulEssenceUIText = GameObject.Find("Soul_Essence_Quantity");
-        bloodEssenceUIText = GameObject.Find("Blood_Essence_Quantity");
-        magicEssenceUIText = GameObject.Find("Magic_Essence_Quantity");
+        //soulEssenceUIText = GameObject.Find("Soul_Essence_Quantity");
+        //bloodEssenceUIText = GameObject.Find("Blood_Essence_Quantity");
+        //magicEssenceUIText = GameObject.Find("Magic_Essence_Quantity");
     }
 
     public void dropEssenceOnDeath()
