@@ -4,32 +4,32 @@ using UnityEngine;
 
 public class Enemy_Health : MonoBehaviour
 {
-    public float maxHealth;     // Maximální životy nepřítele
-    private float Health;       // Aktuální životy nepřítele
+    public float maxHealth;     
+    private float Health;       
 
-    public GameObject playerObject;
+    GameObject playerObject;
+
     void Start()
     {
         Health = maxHealth;
+        FindPlayerGameObject();
     }
-    // Funkce volaná při zásahu protivníka útokem
+
     public void TakeDamage(float damage)
     {
-        Health = Health - damage;
-        //Debug.Log(Health + "/" + maxHealth);
+        Health -= damage;
+
 
         if (isEnemyDead(Health))
         {
-            //Debug.Log("Enemy Died!");
-            dropEssenceOnDeath();
+            DropEssenceOnDeath();
             Destroy(gameObject);
         }
     }
 
-    void dropEssenceOnDeath()
+    void DropEssenceOnDeath()
     {
-        Debug.Log("Drop");
-        playerObject.GetComponent<Player_Item_Drop>().dropEssenceOnDeath();        
+        playerObject.GetComponent<Player_Item_Drop>().DropEssenceOnDeath();        
     }
 
     bool isEnemyDead(float Health)
@@ -44,5 +44,15 @@ public class Enemy_Health : MonoBehaviour
             isEnemyDead = false; 
         }
         return isEnemyDead;
+    }
+
+    void FindPlayerGameObject()
+    {
+        playerObject = GameObject.Find("Player(Clone)");
+
+        if(playerObject == null)
+        {
+            Debug.LogError("GameObject Player(Clone) not found! Enemy_Health.cs");
+        }
     }
 }

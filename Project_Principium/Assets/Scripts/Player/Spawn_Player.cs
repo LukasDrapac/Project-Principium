@@ -22,12 +22,12 @@ public class Spawn_Player : MonoBehaviour
     void spawnPlayer()
     {
         spawnPosition.position = new Vector3(spawnPosition.position.x + xPosition, spawnPosition.position.y + yPosition, 0);
-        player = Instantiate(playerToSpawn, spawnPosition);
+        player = Instantiate(playerToSpawn, spawnPosition) as GameObject;
     }
 
     void setCameraPositionToPlayer()
     {
         GameObject camera = GameObject.Find("Main Camera");
-        camera.GetComponent<CameraFollow>().findPlayerToFollow();       
+        camera.GetComponent<CameraFollow>().FindPlayerToFollow();       
     }
 }

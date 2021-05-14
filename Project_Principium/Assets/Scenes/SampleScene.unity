@@ -343,30 +343,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1525023774 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3033529923463196476, guid: 8fb3849fb9add53429d85c19632d9b16, type: 3}
-  m_PrefabInstance: {fileID: 3033529923273340923}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1525023776
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1525023774}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7afe774dbde402147a206a9b8e037cc2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1001 &3033529923273340923
+--- !u!1001 &2019858080
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 373432463603857299, guid: 8fb3849fb9add53429d85c19632d9b16, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 373432463603857299, guid: 8fb3849fb9add53429d85c19632d9b16, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 373432463603857299, guid: 8fb3849fb9add53429d85c19632d9b16, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3033529923653382160, guid: 8fb3849fb9add53429d85c19632d9b16, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -461,14 +456,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3033529924206170157, guid: 8fb3849fb9add53429d85c19632d9b16, type: 3}
       propertyPath: m_Pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3033529924206170158, guid: 8fb3849fb9add53429d85c19632d9b16, type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 519420031}
-    - target: {fileID: 3033529924934439620, guid: 8fb3849fb9add53429d85c19632d9b16, type: 3}
-      propertyPath: m_Interactable
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

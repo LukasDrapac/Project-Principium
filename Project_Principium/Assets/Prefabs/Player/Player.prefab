@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 7320511653915121307}
   - component: {fileID: 1411057996487611698}
   - component: {fileID: 7320511653915121300}
-  - component: {fileID: 78405230}
+  - component: {fileID: 658887282621502935}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -236,7 +236,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &78405230
+--- !u!114 &658887282621502935
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -248,10 +248,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc05151ed26a8114597bd060b6ec68fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bloodEssenceDropChance: 100
-  magicEssenceDropChance: 1
-  soulEssenceDropChance: 0.5
+  bloodEssenceDropChanceModifier: 100
+  magicEssenceDropChanceModifier: 1
+  soulEssenceDropChanceModifier: 1
   dropChance: 100
-  bloodEssenceUIText: {fileID: 2523824408718034232, guid: 51074736e1a5bd84eb89984d1e8d717d, type: 3}
+  bloodEssenceUIText: {fileID: 0}
   magicEssenceUIText: {fileID: 7632876426500606290, guid: c9e997938757eb44f8e1ece019278c31, type: 3}
   soulEssenceUIText: {fileID: 6416707576222975514, guid: 30d9919d3c12c25488f09a01610bb683, type: 3}

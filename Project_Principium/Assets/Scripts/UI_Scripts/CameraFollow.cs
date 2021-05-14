@@ -10,16 +10,16 @@ public class CameraFollow : MonoBehaviour
 
     void Update()
     {
-        setCameraPosition();
+        SetCameraPosition();
     }
 
-    public void findPlayerToFollow()
+    public void FindPlayerToFollow()
     {
         playerObject = GameObject.Find("Player(Clone)");
         playerPosition = playerObject.transform;
     }
 
-    void setCameraPosition()
+    void SetCameraPosition()
     {
         if (playerObject != null)
         {

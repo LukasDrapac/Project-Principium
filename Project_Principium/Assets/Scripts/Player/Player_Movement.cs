@@ -15,6 +15,7 @@ public class Player_Movement : MonoBehaviour
     public Animator animator;
 
     bool isAbleToJump = true;
+
     
     void Start()
     {

@@ -51,7 +51,7 @@ public class Map_Generation_Script : MonoBehaviour
         }
         else
         {
-            Debug.Log("Map Complete");
+            //Debug.Log("Map Complete");
         }
         
     }
