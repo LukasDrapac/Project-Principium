@@ -14,11 +14,15 @@ public class Player_Item_Drop : MonoBehaviour
     GameObject magicEssenceUIText;
     GameObject soulEssenceUIText;
 
+    Player_Currency currencyScript;
+
     void Awake()
     {
         bloodEssenceUIText = GameObject.Find("Blood_Essence_Quantity");
         magicEssenceUIText = GameObject.Find("Magic_Essence_Quantity");
         soulEssenceUIText = GameObject.Find("Soul_Essence_Quantity");
+
+        currencyScript = this.GetComponent<Player_Currency>();
     }
 
     public void DropEssenceOnDeath()
@@ -34,16 +38,19 @@ public class Player_Item_Drop : MonoBehaviour
             float soul = Random.Range(0, 100) * soulEssenceDropChanceModifier;
 
             if (ChanceForDropComputed(blood, magic, soul) == soul)
-            {           
-                soulEssenceUIText.GetComponent<Soul_Essence_Quantity_Script>().changeQuantity(1);
+            {
+                currencyScript.SetSoulEsseneQuantity(1);
+                soulEssenceUIText.GetComponent<Soul_Essence_Quantity_Script>().ChangeQuantity(currencyScript.GetSoulEssenceQuantity());
             }
             else if (ChanceForDropComputed(blood, magic, soul) == blood)
             {
-                bloodEssenceUIText.GetComponent<Blood_Essence_Quantity_Script>().ChangeQuantity(1);
+                currencyScript.SetBloodEssenceyQuantity(1);
+                bloodEssenceUIText.GetComponent<Blood_Essence_Quantity_Script>().ChangeQuantity(currencyScript.GetBloodEssenceyQuantity());
             }
             else if (ChanceForDropComputed(blood, magic, soul) == magic)
-            {            
-                magicEssenceUIText.GetComponent<Magic_Essence_Quantity_Script>().changeQuantity(1);
+            {
+                currencyScript.SetMagicEssenceQuantity(1);
+                magicEssenceUIText.GetComponent<Magic_Essence_Quantity_Script>().ChangeQuantity(currencyScript.GetMagicEssenceQuantity());
             }
             else
             {

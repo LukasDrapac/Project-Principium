@@ -5,18 +5,13 @@ using UnityEngine.UI;
 
 public class Blood_Essence_Quantity_Script : MonoBehaviour
 {
-    private int essenceQuantity;
-    
-
     void Awake()
     {
-        essenceQuantity = 0;
-        gameObject.GetComponent<Text>().text = essenceQuantity.ToString();
+        this.GetComponent<Text>().text = 0.ToString();
     }
 
-    public void ChangeQuantity(int quantityDiference)
-    {        
-        essenceQuantity += quantityDiference;
-        gameObject.GetComponent<Text>().text = essenceQuantity.ToString();
+    public void ChangeQuantity(int newQuantity)
+    {
+        this.GetComponent<Text>().text = newQuantity.ToString();
     }
 }

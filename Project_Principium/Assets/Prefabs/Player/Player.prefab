@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 1411057996487611698}
   - component: {fileID: 7320511653915121300}
   - component: {fileID: 658887282621502935}
+  - component: {fileID: 3599699624139846562}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -248,10 +249,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc05151ed26a8114597bd060b6ec68fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bloodEssenceDropChanceModifier: 100
+  bloodEssenceDropChanceModifier: 1
   magicEssenceDropChanceModifier: 1
   soulEssenceDropChanceModifier: 1
   dropChance: 100
-  bloodEssenceUIText: {fileID: 0}
-  magicEssenceUIText: {fileID: 7632876426500606290, guid: c9e997938757eb44f8e1ece019278c31, type: 3}
-  soulEssenceUIText: {fileID: 6416707576222975514, guid: 30d9919d3c12c25488f09a01610bb683, type: 3}
+--- !u!114 &3599699624139846562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7320511653915121301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c04ec9a5f99e2b4090a3366a3f74807, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

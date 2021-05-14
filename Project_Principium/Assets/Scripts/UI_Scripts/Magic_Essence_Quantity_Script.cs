@@ -5,18 +5,13 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Magic_Essence_Quantity_Script : MonoBehaviour
 {
-    private int essenceQuantity;
-    Text uiText;
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        uiText = gameObject.GetComponent<Text>();
-        uiText.text = 0.ToString();
+        this.GetComponent<Text>().text = 0.ToString();
     }
 
-    public void changeQuantity(int quantityDiference)
+    public void ChangeQuantity(int newQuantity)
     {
-        essenceQuantity += quantityDiference;
-        uiText.text = essenceQuantity.ToString();
+        this.GetComponent<Text>().text = newQuantity.ToString();
     }
 }
