@@ -7,7 +7,7 @@ public class R_Upstairs_Generation : MonoBehaviour
     void Start()
     {
         GameObject newTile = gameObject;        
-        newTile.GetComponentInParent<Floor_Generation_Management>().spawnRightMapTile(transform);
+        newTile.GetComponentInParent<Floor_Generation_Management>().SpawnRightMapTile(transform);
     }
 
 

@@ -33,20 +33,20 @@ public class Map_Generation_Script : MonoBehaviour
             { 
                 if (Random.Range(0, 100) >= 50)
                 {                    
-                    currentMapLengthIncrement();
-                    instantiateLeftMapTile(newMapTilePosition);
+                    CurrentMapLengthIncrement();
+                    InstantiateLeftMapTile(newMapTilePosition);
                 }
                 else{
-                    currentMapLengthIncrement();
+                    CurrentMapLengthIncrement();
                     nextElevatingTile = 0;
-                    instantiateUpMapTile(newMapTilePosition);
+                    InstantiateUpMapTile(newMapTilePosition);
                 }                
             }
             else
             {
-                currentMapLengthIncrement();
-                nextUpTileIncrement();
-                instantiateLeftMapTile(newMapTilePosition);
+                CurrentMapLengthIncrement();
+                NextUpTileIncrement();
+                InstantiateLeftMapTile(newMapTilePosition);
             }           
         }
         else
@@ -56,32 +56,32 @@ public class Map_Generation_Script : MonoBehaviour
         
     }
 
-    void currentMapLengthIncrement()
+    void CurrentMapLengthIncrement()
     {
         currentMapLength += 1;
     }
-    void nextUpTileIncrement()
+    void NextUpTileIncrement()
     {
         nextElevatingTile += 1;
     }
 
-    int getRandomTile(GameObject[] tileArray)
+    int GetRandomTile(GameObject[] tileArray)
     {
         return Random.Range(0, tileArray.Length);
     }
 
-    void instantiateLeftMapTile(Transform newMapTilePosition)
+    void InstantiateLeftMapTile(Transform newMapTilePosition)
     {
-        GameObject newMapTile = Instantiate(leftMapTiles[getRandomTile(leftMapTiles)], newMapTilePosition);
+        GameObject newMapTile = Instantiate(leftMapTiles[GetRandomTile(leftMapTiles)], newMapTilePosition);
     }
 
-    void instantiateUpMapTile(Transform newMapTilePosition)
+    void InstantiateUpMapTile(Transform newMapTilePosition)
     {
-        GameObject newMapTile = Instantiate(upMapTiles[getRandomTile(upMapTiles)], newMapTilePosition);
+        GameObject newMapTile = Instantiate(upMapTiles[GetRandomTile(upMapTiles)], newMapTilePosition);
     }
 
-    public void spawnElevatingTile(Transform newMapTilePosition)
+    public void SpawnElevatingTile(Transform newMapTilePosition)
     {
-        GameObject newElevatingTile = Instantiate(elevatingMapTiles[0], newMapTilePosition);
+        GameObject newElevatingTile = Instantiate(elevatingMapTiles[GetRandomTile(elevatingMapTiles)], newMapTilePosition);
     }
 }

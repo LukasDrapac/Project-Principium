@@ -16,9 +16,8 @@ public class Player_Movement : MonoBehaviour
 
     bool isAbleToJump = true;
 
-    
-    void Start()
-    {
+
+    void Start() {
         rigidBody = GetComponent<Rigidbody2D>();
     }
   
@@ -39,14 +38,14 @@ public class Player_Movement : MonoBehaviour
 
     void jumpControlFunction()
     {
-        if (jumpButtonPressed() && isAbleToJump)        // Podmínka stisknu tlačítka a povolení pro skok (zamezení vícenásobnému skoku)
+        if (jumpButtonPressed() && isAbleToJump)        
         {
             canPlayerJump();            
         }
 
-        if (rigidBody.velocity.y <= 0)       // Podmínka zajišťující zrychlený pád postavy
+        if (rigidBody.velocity.y <= 0)       
         {
-            rigidBody.velocity = rigidBody.velocity + Vector2.up * Physics2D.gravity.y * fallMultiplier * Time.deltaTime;       // Kód zajišťující pád postavy ze skoku
+            rigidBody.velocity = rigidBody.velocity + Vector2.up * Physics2D.gravity.y * fallMultiplier * Time.deltaTime;       
         }
     }
 
@@ -54,7 +53,7 @@ public class Player_Movement : MonoBehaviour
     {
         if (doubleJumpLimit < 2)
         {
-            rigidBody.velocity = Vector2.up * jumpVelocity;     // Zajištění skoku se zvolenou Velocity
+            rigidBody.velocity = Vector2.up * jumpVelocity;     
             doubleJumpLimit += 1;
         }
         else

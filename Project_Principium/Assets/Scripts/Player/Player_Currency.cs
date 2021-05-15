@@ -8,41 +8,34 @@ public class Player_Currency : MonoBehaviour
     private int magicEssenceQuantity;
     private int soulEssenceQuantity;
 
-    void Start()
-    {
+    void Start(){
         bloodEssenceQuantity = 0;
         magicEssenceQuantity = 0;
         soulEssenceQuantity = 0;
     }
-    public void SetBloodEssenceyQuantity(int quantityDiference)
-    {
+    public void SetBloodEssenceyQuantity(int quantityDiference){
         bloodEssenceQuantity += quantityDiference;
     }
 
 
-    public void SetSoulEsseneQuantity(int quantityDiference)
-    {
+    public void SetSoulEsseneQuantity(int quantityDiference){
         soulEssenceQuantity += quantityDiference;
     }
 
-    public void SetMagicEssenceQuantity(int quantityDiference)
-    {
+    public void SetMagicEssenceQuantity(int quantityDiference){
         magicEssenceQuantity += quantityDiference;
     }
 
 
-    public int GetBloodEssenceyQuantity()
-    {
+    public int GetBloodEssenceyQuantity(){
         return bloodEssenceQuantity;
     }
 
-    public int GetSoulEssenceQuantity()
-    {
+    public int GetSoulEssenceQuantity(){
         return soulEssenceQuantity;
     }
 
-    public int GetMagicEssenceQuantity()
-    {
+    public int GetMagicEssenceQuantity(){
         return magicEssenceQuantity;
     }
 

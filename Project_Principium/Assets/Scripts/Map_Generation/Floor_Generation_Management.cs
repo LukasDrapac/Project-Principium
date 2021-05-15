@@ -21,9 +21,9 @@ public class Floor_Generation_Management : MonoBehaviour
         currentRightLength = 0;
     }
 
-    public void spawnRightMapTile(Transform newTilePosition)
+    public void SpawnRightMapTile(Transform newTilePosition)
     {        
-        incrementRightLength();
+        IncrementRightLength();
         if (currentRightLength < maxRightLength)
         {
             GameObject newTile = Instantiate(rightMapTiles[Random.Range(0, rightMapTiles.Length)], newTilePosition);
@@ -35,9 +35,9 @@ public class Floor_Generation_Management : MonoBehaviour
         
     }
 
-    public void spawnLeftMapTile(Transform newTilePosition)
+    public void SpawnLeftMapTile(Transform newTilePosition)
     {        
-        incrementLeftLength();
+        IncrementLeftLength();
         if (currentLeftLength < maxLeftLength)
         {
             GameObject newTile = Instantiate(leftMapTiles[Random.Range(0, leftMapTiles.Length)], newTilePosition);
@@ -49,12 +49,12 @@ public class Floor_Generation_Management : MonoBehaviour
         
     }
 
-    void incrementRightLength()
+    void IncrementRightLength()
     {
         currentRightLength += 1;
     }
 
-    void incrementLeftLength()
+    void IncrementLeftLength()
     {
         currentLeftLength += 1;
     }
