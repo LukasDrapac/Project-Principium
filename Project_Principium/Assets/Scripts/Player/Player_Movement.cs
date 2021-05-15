@@ -10,7 +10,7 @@ public class Player_Movement : MonoBehaviour
     private int doubleJumpLimit;             
     private float xMovementControl;          
     public float jumpHeightLimit;
-
+    public float airFriction;
     Rigidbody2D rigidBody;
     public Animator animator;
 
@@ -19,37 +19,41 @@ public class Player_Movement : MonoBehaviour
 
     void Start() {
         rigidBody = GetComponent<Rigidbody2D>();
+        rigidBody.drag = airFriction;
     }
   
     void Update()
     {        
-        movementControl();        
-        jumpControlFunction();
+        MovementControl();        
+        JumpControlFunction();
     }
 
     void OnCollisionEnter2D(Collision2D collisionInfo)
     {
         if (collisionInfo.collider.name == "Ground")
         {
+            rigidBody.drag = airFriction;
             doubleJumpLimit = 0;
             isAbleToJump = true;
         }        
     }
 
-    void jumpControlFunction()
+    void JumpControlFunction()
     {
-        if (jumpButtonPressed() && isAbleToJump)        
+        if (JumpButtonPressed() && isAbleToJump)        
         {
-            canPlayerJump();            
+            rigidBody.drag = airFriction;
+            CanPlayerJump();            
         }
 
         if (rigidBody.velocity.y <= 0)       
         {
+            rigidBody.drag = 0;
             rigidBody.velocity = rigidBody.velocity + Vector2.up * Physics2D.gravity.y * fallMultiplier * Time.deltaTime;       
         }
     }
 
-    void canPlayerJump()
+    void CanPlayerJump()
     {
         if (doubleJumpLimit < 2)
         {
@@ -62,7 +66,7 @@ public class Player_Movement : MonoBehaviour
         }
     }
 
-    bool jumpButtonPressed()
+    bool JumpButtonPressed()
     {
         
         if(Input.GetButtonDown("Jump") && Input.GetKey(KeyCode.S)){
@@ -75,7 +79,7 @@ public class Player_Movement : MonoBehaviour
         else { return false; }
     }
 
-    void movementControl()
+    void MovementControl()
     {
         xMovementControl = Input.GetAxis("Horizontal");
         if(xMovementControl > 0)
@@ -96,7 +100,7 @@ public class Player_Movement : MonoBehaviour
        
     }
 
-    void movementAnimationControl()
+    void MovementAnimationControl()
     {
         animator.SetFloat("Speed", Mathf.Abs(xMovementControl));       
     }

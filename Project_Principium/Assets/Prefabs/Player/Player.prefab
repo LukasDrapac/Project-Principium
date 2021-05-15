@@ -180,10 +180,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecf6b1b750164064fb925a60d0f7cd40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerMoveSpeed: 8
-  jumpVelocity: 6
-  fallMultiplier: 3
+  playerMoveSpeed: 7
+  jumpVelocity: 7
+  fallMultiplier: 1.5
   jumpHeightLimit: 1
+  airFriction: 1
   animator: {fileID: 7320511653915121300}
 --- !u!114 &7320511653915121307
 MonoBehaviour:
