@@ -13,7 +13,7 @@ public class Map_Generation_Script : MonoBehaviour
 
     public int maxMapLength;
     public int elevationTilesDistance;
-
+    public bool mapGenerationDisabled;
     private int[] branches;
     private int currentMapLength;
     private int nextElevatingTile;
@@ -26,7 +26,7 @@ public class Map_Generation_Script : MonoBehaviour
 
     public void spawnLeftMapTile(Transform newMapTilePosition)
     {
-        if(currentMapLength <= maxMapLength)
+        if(currentMapLength <= maxMapLength && !mapGenerationDisabled)
         {
             
             if (nextElevatingTile >= elevationTilesDistance)

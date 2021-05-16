@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1301700186017317234, guid: c09aeff7dce62fb4c89439c8c3ed0915, type: 3}
+      propertyPath: mapGenerationDisabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3208973283116729590, guid: c09aeff7dce62fb4c89439c8c3ed0915, type: 3}
       propertyPath: m_Name
       value: SpawnTile

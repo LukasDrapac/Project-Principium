@@ -5,7 +5,7 @@ using UnityEngine;
 public class Platform_Effector_Rotation : MonoBehaviour
 {
     float timeB = 0;
-    float waitingTime = 0.15f;
+    float waitingTime = 0.20f;
     bool platformEffectorReverse;
     PlatformEffector2D platformEffectorObject;
     void Start()
