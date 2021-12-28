@@ -1,2 +1,2 @@
 # Project_Principium
-Všechny scripty z tohoto repozitáře jsou ve složce: Project_Principium --> Assets --> Scripts. Hra není 100% funčkní a není ani z části hotová.  
+Všechny scripty z tohoto repozitáře jsou ve složce: Project_Principium --> Assets --> Scripts. To, co ve hře momentálně je, je funkční na +- 90%.  
